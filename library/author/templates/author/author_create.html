@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Add new author{% endblock %}
+{% block content %}
+<form action="{% url 'author:add_author' %}" method="post">
+    {% csrf_token %}
+    Add new author:
+    {{ form.as_p }}
+    {{ form.error_messages }}
+    <button type="submit" value="Submit">Submit</button>
+    <button onclick="location.href = '{% url 'author:author' %}'">Back</button>
+</form>
+{% endblock %}

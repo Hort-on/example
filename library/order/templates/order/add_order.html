@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Order{% endblock %}
+
+{% block content %}
+
+    <h2>Add Order</h2>
+    {% if request.user.role == 0 %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <label for="id_book">Book:</label>
+            {{ form.book }}
+            <label for="id_plated_end_at">Plated End At:</label>
+            {{ form.plated_end_at }}
+            <button type="submit">Add Order</button>
+        </form>
+
+    {% endif %}
+{% endblock %}

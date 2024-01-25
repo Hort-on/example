@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+<h3>Add Book:</h3>
+    <form action="{% url 'book:add_book' %}" method = "post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.error_messages }}
+        <button type="submit">Add</button>
+        <button type="button" onclick="location.href = '{% url 'book:book' %}'">Back</button>
+    </form>
+
+
+{% endblock %}

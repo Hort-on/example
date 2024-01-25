@@ -59,10 +59,10 @@ def test_login_process(driver, valid_username, valid_password, invalid_username,
 
 def main():
     driver = webdriver.Chrome()
-    valid_username = "yurakholod97@gmail.com"
-    valid_password = "Stryker1105"
-    invalid_username = "yurakholod96@gmail.com"
-    invalid_password = "Stryker1100"
+    valid_username = ""
+    valid_password = ""
+    invalid_username = ""
+    invalid_password = ""
 
     test_login_process(driver, valid_username, valid_password, invalid_username, invalid_password)
 
